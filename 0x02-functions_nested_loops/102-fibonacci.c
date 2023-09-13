@@ -8,13 +8,13 @@
 
 int main(void)
 {
-	long unsigned int i, a, b, term;
+	unsigned long int i, a, b, term;
+
 	a = 1;
 	b = 2;
-
 	printf("%lu, %lu", a, b);
 
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		term = a + b;
 		a = b;
