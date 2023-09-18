@@ -14,7 +14,7 @@ int _strlen(char *s)
 	{
 		/*incrementing count*/
 		count += 1;
-		/*moving the pointer to the nest address*/ 
+		/*moving the pointer to the next address*/
 		s += 1;
 	}
 	return (count);
