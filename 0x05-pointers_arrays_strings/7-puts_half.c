@@ -17,18 +17,22 @@ void puts_half(char *s)
 		len += 1;/* incrementing len to get the length of string*/
 	}
 	/* checking if the length is divisible by 2*/
-	if (len % 2 == 0)
+	if (len % 2 != 0)
 	{
-		n = len / 2;
+		n = (len - 1) / 2;
+		for (i = n + 1; s[i]; i++)
+		{
+			_putchar(s[i]);
+		}
 	}
 	else
 	{
-		n = (len - 1) / 2;
-	}
-	/*printing from half of the string*/
-	for (i = n; s[i]; i++)
-	{
-		_putchar(s[i]);
+		n = len / 2;
+		/*printing from half of the string*/
+		for (i = n; s[i]; i++)
+		{
+			_putchar(s[i]);
+		}
 	}
 	_putchar('\n');
 }
