@@ -12,7 +12,7 @@ void puts2(char *str)
 		if (*str == '.')
 		{
 			_putchar(*str);
-			break;
+			continue;
 		}
 		_putchar(*str);
 		str += 2;
