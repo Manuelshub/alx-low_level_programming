@@ -9,22 +9,24 @@
  */
 void puts_half(char *s)
 {
-	int count, i, len;
+	int len, i, n;
 
-	/*counting the length of the strng with my user made function*/
-	count = _strlen(s);
-
-	/* checking if the length is divisible by 2*/
-	if (count % 2 != 0)
+	len = 0;
+	for (i = 0; s[i]; i++)
 	{
-		len = (count - 1) / 2;
+		len += 1;/* incrementing len to get the length of string*/
+	}
+	/* checking if the length is divisible by 2*/
+	if (len % 2 != 0)
+	{
+		n = (len - 1) / 2;
 	}
 	else
 	{
-		len = count / 2;
+		n = len / 2;
 	}
 	/*printing from half of the string*/
-	for (i = len; s[i]; i++)
+	for (i = n; s[i]; i++)
 	{
 		_putchar(s[i]);
 	}
