@@ -12,9 +12,9 @@ char *cap_string(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		/*checking if the first character is uppercase*/
-		if (s[0] >= 'A' && s[i] <= 'Z')
+		if (s[0] >= 'a' && s[i] <= 'z')
 		{
-			s[0] = s[0] - 0;
+			s[0] = s[0] - 32;
 		}
 		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',' || s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?' || s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
