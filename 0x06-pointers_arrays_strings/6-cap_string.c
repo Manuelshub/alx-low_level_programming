@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap-string - capitalizes all words of astring.
+ * cap_string - capitalizes all words of astring.
  * @s: pointer to the string.
  * Return: the manipulated string.
  */
@@ -16,7 +16,10 @@ char *cap_string(char *s)
 		{
 			s[0] = s[0] - 32;
 		}
-		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',' || s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?' || s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'
+					|| s[i] == ',' || s[i] == ';' || s[i] == '.'
+					|| s[i] == '!' || s[i] == '?' || s[i] == '"'
+					|| s[i] == '(' || s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
 			if (s[i + 1] >= 'a' && s[i] <= 'z')
 				s[i + 1] = s[i + 1] - 32;
