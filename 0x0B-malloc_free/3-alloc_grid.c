@@ -17,7 +17,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	/*Allocating mem for the first subscript of the array*/
-	ptr = malloc(height * sizeof(int *));
+	ptr = malloc(height * sizeof(*ptr));
 	if (ptr == 0)
 	{
 		return (NULL);
@@ -25,7 +25,7 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 	{
 		/*Allocating mem for the second subscript of the array*/
-		ptr[i] = malloc(width * sizeof(int **));
+		ptr[i] = malloc(width * sizeof(**ptr));
 		if (ptr[i] == 0)
 		{
 			for (i--; i >= 0; i--)
