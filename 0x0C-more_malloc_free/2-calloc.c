@@ -5,7 +5,7 @@
  * @nmemb: element of the array.
  * @size: sizeof the type to be casted into.
  * Return: if nmemb or size = 0 or function fails return NULL
-	otherwise return apointer to the array.
+ *	otherwise return apointer to the array.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
