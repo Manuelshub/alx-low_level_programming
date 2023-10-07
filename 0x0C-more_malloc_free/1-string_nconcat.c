@@ -10,15 +10,17 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *arr;
-	int i, len;
-	unsigned int j;
+	unsigned int i, j, len, len2;
 
 	len = strlen(s1);
+	len2 = strlen(s2);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	arr = malloc(sizeof(char) * (len + n) + 1);
+	if (n >= len2)
+		len2 = n;
+	arr = malloc(sizeof(char) * (len + len2) + 1);
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
