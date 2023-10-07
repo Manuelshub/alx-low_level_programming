@@ -12,12 +12,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *arr;
 	unsigned int i, len, len2;
 
-	len = strlen(s1);
-	len2 = strlen(s2);
 	if (s1 == NULL)
 		len = 0;
+	else
+		len = strlen(s1);
 	if (s2 == NULL)
 		len2 = 0;
+	else
+		len2 = strlen(s2);
 	if (len2 > n)
 		len2 = n;
 	arr = malloc(sizeof(char) * (len + len2) + 1);
