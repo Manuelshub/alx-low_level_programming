@@ -15,7 +15,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	/*allocating memory for our pointer variable*/
-	ptarr = malloc(sizeof(int) * (max + 1));
+	ptarr = malloc(sizeof(int) * (max - min) + 1);
 	if (ptarr == NULL)
 	{
 		return (NULL);
