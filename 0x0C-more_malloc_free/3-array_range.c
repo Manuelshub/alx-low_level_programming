@@ -9,6 +9,7 @@
 int *array_range(int min, int max)
 {
 	int *ptarr;
+	int i = 0;
 
 	if (min > max)
 	{
@@ -23,8 +24,9 @@ int *array_range(int min, int max)
 	while (min <= max)
 	{
 		/*Initializing each element of array*/
-		*(ptarr + min) = min;
+		*(ptarr + i) = min;
 		min++;
+		i++;
 	}
 
 	return (ptarr);
