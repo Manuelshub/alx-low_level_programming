@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len2 = strlen(s2);
 	if (len2 > n)
 		len2 = n;
-	arr = malloc(sizeof(char) * (len + len2) + 1);
+	arr = malloc(sizeof(char) * (len + len2 + 1));
 	if (arr == NULL)
 		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
