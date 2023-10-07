@@ -9,22 +9,23 @@
 int *array_range(int min, int max)
 {
 	int *ptarr;
-	int i = 0;
+	int i = 0, total;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
+	total = max - min + 1;
 	/*allocating memory for our pointer variable*/
-	ptarr = malloc(sizeof(int) * (max - min) + 1);
+	ptarr = malloc(sizeof(int) * total);
 	if (ptarr == NULL)
 	{
 		return (NULL);
 	}
-	while (min <= max)
+	while (i < total)
 	{
 		/*Initializing each element of array*/
-		*(ptarr + i) = min;
+		ptarr[i] = min;
 		min++;
 		i++;
 	}
