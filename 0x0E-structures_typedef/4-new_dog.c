@@ -35,11 +35,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(n);
 		return (NULL);
 	}
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= len; i++)
 	{
 		n[i] = name[i];
 	}
-	for (i = 0; i < len2; i++)
+	for (i = 0; i <= len2; i++)
 	{
 		o[i] = owner[i];
 	}
