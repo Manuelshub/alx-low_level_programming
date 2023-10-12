@@ -20,9 +20,9 @@ int int_index(int *array, int size, int(*cmp)(int))
 			if (cmp(array[cont]))
 				break;
 		}
-		if (!cmp(array[cont]))
-			return (-1);
 	}
+	if (!cmp(array[cont]))
+		return (-1);
 	return (cont);
 
 }
