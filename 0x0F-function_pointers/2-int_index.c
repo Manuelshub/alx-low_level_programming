@@ -3,9 +3,11 @@
 /**
  * int_index - searches for an integer.
  * @array: array of integers.
- * @si:wq
-:ze: the size of the array.
+ * @size: the size of the array.
  * @cmp: function pointer.
+ *
+ * Return: the index of the first element that cmp did not
+ *	return 0 otherwise return -1.
  */
 int int_index(int *array, int size, int(*cmp)(int))
 {
