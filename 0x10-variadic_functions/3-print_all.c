@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-
 /**
  * print_all - prints anything.
  * @format: list of types of arguments passed to function.
@@ -12,11 +11,10 @@ void print_all(const char * const format, ...)
 	float f;
 
 	diff = "";
-	/* inializing the list*/
 	va_start(my_args, format);
 	/* accessing the arguments in the list */
 	cont = 0;
-	while (format[cont])
+	while (format && format[cont])
 	{
 		switch (format[cont])
 		{
