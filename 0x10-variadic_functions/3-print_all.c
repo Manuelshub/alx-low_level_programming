@@ -6,7 +6,6 @@
  */
 void print_all(const char * const format, ...)
 {
-	/* storing the variable argument in va_list */
 	va_list my_args;
 	int cont, i;
 	char *s, *diff, c;
@@ -15,12 +14,11 @@ void print_all(const char * const format, ...)
 	diff = "";
 	/* inializing the list*/
 	va_start(my_args, format);
-
 	/* accessing the arguments in the list */
 	cont = 0;
 	while (format[cont])
 	{
-		switch(format[cont])
+		switch (format[cont])
 		{
 			case 'c':
 				c = va_arg(my_args, int);
