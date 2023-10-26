@@ -9,6 +9,8 @@ unsigned int _strlen(const char *s)
 {
 	unsigned int l = 0;
 
+	if (s == NULL)
+		return (0);
 	while (s[l])
 		l++;
 
