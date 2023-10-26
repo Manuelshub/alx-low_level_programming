@@ -30,15 +30,13 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	for (i = 0; b[i] != '\0'; i++, j--)
 	{
-		if (b[i] != '0' && b[i] != '1')
-		{
-			return (0);
-		}
-		else
+		if (b[i] == '0' || b[i] == '1')
 		{
 			n = b[j] - '0';
 			num += n << i;
 		}
+		else
+			return (0);
 	}
 	return (num);
 }
