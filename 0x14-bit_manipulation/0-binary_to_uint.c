@@ -26,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int num = 0, i, n;
 	unsigned int len = _strlen(b), j = len - 1;
 
-	if (b == NULL)
+	if (b == NULL || *b == '\0')
 		return (0);
 	for (i = 0; b[i] != '\0'; i++, j--)
 	{
