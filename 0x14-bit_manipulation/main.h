@@ -12,7 +12,7 @@ union endian
 {
 	int n;
 	char c[4];
-}
+};
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
