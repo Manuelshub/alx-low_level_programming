@@ -3,6 +3,17 @@
 
 #include <stdlib.h>
 
+/**
+ * union endian - user defined data type.
+ * @n: integer member.
+ * @c: character array member.
+ */
+union endian
+{
+	int n;
+	char c[4];
+}
+
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
