@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is part of the Holberton School curriculum and focuses on file input and output (I/O) operations in the C programming language. It covers essential concepts related to file handling, including opening, reading, writing, and closing files.
+This project is part of the Alx School curriculum and focuses on file input and output (I/O) operations in the C programming language. It covers essential concepts related to file handling, including opening, reading, writing, and closing files.
 
 ## Files
 
