@@ -6,7 +6,6 @@
  */
 void error_message(int fd)
 {
-	close(fd);
 	if (close(fd) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd);
