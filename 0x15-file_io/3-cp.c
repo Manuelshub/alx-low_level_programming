@@ -36,13 +36,13 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	des_fd = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	des_fd = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (des_fd == -1)
 	{
 		dprintf(2, "Error: Can't read to file %s\n", av[2]);
 		exit(98);
 	}
-	while ((num = read(source_fd, buffer, 1024)) > 0)
+	while ((num = read(source_fd, buffer, sizeof(buffer))) > 0)
 	{
 		if (write(des_fd, buffer, num) != num)
 		{
@@ -55,6 +55,8 @@ int main(int ac, char **av)
 			exit(98);
 		}
 	}
+	close(source_fd);
+	close(des_fd);
 	error_message(source_fd);
 	error_message(des_fd);
 	return (0);
