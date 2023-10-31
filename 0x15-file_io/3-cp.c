@@ -21,8 +21,7 @@ void error_message(int fd)
  */
 int main(int ac, char **av)
 {
-	int source_fd, des_fd;
-	ssize_t num;
+	int source_fd, des_fd, num;
 	char buffer[1024];
 
 	if (ac != 3)
@@ -36,7 +35,7 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	des_fd = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
+	des_fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (des_fd == -1)
 	{
 		dprintf(2, "Error: Can't read to file %s\n", av[2]);
