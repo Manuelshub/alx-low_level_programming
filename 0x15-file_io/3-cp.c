@@ -6,6 +6,7 @@
  */
 void error_message(int fd)
 {
+	close(fd);
 	if (close(fd) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd);
@@ -55,8 +56,6 @@ int main(int ac, char **av)
 			exit(98);
 		}
 	}
-	close(source_fd);
-	close(des_fd);
 	error_message(source_fd);
 	error_message(des_fd);
 	return (0);
