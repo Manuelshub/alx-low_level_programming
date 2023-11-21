@@ -7,12 +7,23 @@
  */
 void print_number(int n)
 {
-	int div;
+	int div, is_negative = 0;
 
 	if (n < 0)
 	{
-		n = -1 * n;
-		_putchar('-');
+		if (n == INT_MIN)
+		{
+			is_negative = 1;
+			n /= 10;
+		}
+		n = -n;
+		if (is_negative)
+			_putchar('-');
+	}
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
 	}
 	div = 1;
 	while (n / div >= 10)
