@@ -9,7 +9,7 @@ int main(void)
 	unsigned long num1, num2, i, term, a, b, c;
 
 	num1 = 1, num2 = 2;
-	printf("%lu, %lu", a, b);
+	printf("%lu, %lu", num1, num2);
 	for (i = 0; i < 96; i++)
 	{
 		term = num1 + num2;
