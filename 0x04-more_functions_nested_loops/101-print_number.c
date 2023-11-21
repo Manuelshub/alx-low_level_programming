@@ -17,8 +17,7 @@ void print_number(int n)
 			n /= 10;
 		}
 		n = -n;
-		if (is_negative)
-			_putchar('-');
+		_putchar('-');
 	}
 	if (n == 0)
 	{
@@ -34,4 +33,6 @@ void print_number(int n)
 		n %= div;
 		div /= 10;
 	}
+	if (is_negative)
+		_putchar('8');
 }
