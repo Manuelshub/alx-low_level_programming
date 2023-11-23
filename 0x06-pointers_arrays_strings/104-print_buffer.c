@@ -32,10 +32,10 @@ void print_buffer(char *b, int size)
 					printf("%02x", b[j + 1]);
 				else
 					printf(" ");
-				printf(" ");
 			}
 			else
-				printf("     ");
+				printf("    ");
+			printf(" ");
 		}
 		for (j = i; j < i + 10 && j < size; j++)
 		{
