@@ -44,7 +44,7 @@ char **strtow(char *str)
 	char **ptr, *store = NULL, *word;
 	int word_count, word_index = 0, i, j, lent;
 
-	if (str == NULL)
+	if (str == NULL || strcmp(str, "") == 0)
 		return (NULL);
 	word_count = (*str == ' ') ? 0 : 1;
 	for (i = word_count; str[i]; i++)
