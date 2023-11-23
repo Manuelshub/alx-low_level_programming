@@ -31,7 +31,7 @@ void print_buffer(char *b, int size)
 				if (j + 1 < size)
 					printf("%02x", b[j + 1]);
 				else
-					printf(" ");
+					printf("  ");
 			}
 			else
 				printf("    ");
