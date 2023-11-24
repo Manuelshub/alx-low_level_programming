@@ -38,8 +38,8 @@ int main(int ac, char **av)
 	des_fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (des_fd == -1)
 	{
-		dprintf(2, "Error: Can't read to file %s\n", av[2]);
-		exit(98);
+		dprintf(2, "Error: Can't write to %s\n", av[2]);
+		exit(99);
 	}
 	while ((num = read(source_fd, buffer, sizeof(buffer))) > 0)
 	{
