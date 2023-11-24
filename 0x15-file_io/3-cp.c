@@ -48,11 +48,11 @@ int main(int ac, char **av)
 			dprintf(2, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
-		if (num < 0)
-		{
-			dprintf(2, "Error: can't read from %s\n", av[1]);
-			exit(98);
-		}
+	}
+	if (num < 0)
+	{
+		dprintf(2, "Error: can't read from %s\n", av[1]);
+		exit(98);
 	}
 	error_message(source_fd);
 	error_message(des_fd);
