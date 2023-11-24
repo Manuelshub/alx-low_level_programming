@@ -32,7 +32,7 @@ int main(int ac, char **av)
 	source_fd = open(av[1], O_RDONLY);
 	if (source_fd == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		printf("Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	des_fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
