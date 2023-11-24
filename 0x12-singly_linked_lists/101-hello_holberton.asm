@@ -1,4 +1,3 @@
-global main		; the gcc entry point
 extern printf	; the c function to be called
 
 section .data
@@ -6,6 +5,8 @@ section .data
 	hello_format db "%s", 10, 0
 
 section .text
+	global main				; the gcc entry point
+
 main:						; standard gcc entry point
     sub rsp, 8            ; Align the stack
 
