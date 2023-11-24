@@ -50,7 +50,7 @@ int main(int ac, char **av)
 		}
 		if (num < 0)
 		{
-			dprintf(2, "Error: can't read into buffer\n");
+			dprintf(2, "Error: can't read from %s\n", av[1]);
 			exit(98);
 		}
 	}
