@@ -45,3 +45,5 @@ This Repository contains Directories that will contain files for the ALX C Progr
 20. [0x14-bit_manipulation](./0x14-bit_manipulation) - Bit manipulation techniques in C.
 
 21. [0x15-file_io](./0x15-file_io) - File I/O operations in C.
+
+22. [0x1A-hash_tables](./0x1A-hash_tables) - Hash Functions in C.
