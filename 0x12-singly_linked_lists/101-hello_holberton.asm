@@ -11,8 +11,9 @@ main:						; standard gcc entry point
 
     mov rdi, hello_format
 	mov rsi, hello_message
-    xor rax, rax          ; Clear RAX register (no vector registers used)
+    mov rax, 0				; Clear RAX register (no vector registers used)
     call printf
 
     add rsp, 8            ; Restore the stack
+	mov rax, 0
     ret
