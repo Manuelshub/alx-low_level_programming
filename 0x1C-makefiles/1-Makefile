@@ -1,8 +1,5 @@
 CC = gcc
 SRC := $(wildcard *.c)
 
-school: $(SRC)
+all: $(SRC)
 	$(CC) $(SRC) -o school
-
-all:
-	school
