@@ -3,9 +3,9 @@
 
 /**
  * check_arg - Checks if a string contains only numbers.
- * 
+ *
  * @s: the string.
- * 
+ *
  * Return: 0 if it contains and 1 if not.
  */
 int check_arg(char *s)
@@ -46,7 +46,6 @@ int main(int argc, char **argv)
 
 			if (!check_arg(argument))
 			{
-				
 				printf("Error\n");
 				return (1);
 			}
