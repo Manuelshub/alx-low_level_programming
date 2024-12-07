@@ -10,7 +10,6 @@
 int main(int ac, char **av)
 {
 	int num_bytes, i;
-	void *main_add;
 	unsigned char *byte_arr;
 
 	if (ac != 2)
@@ -26,8 +25,7 @@ int main(int ac, char **av)
 		exit(2);
 	}
 
-	main_add = (void *)main;
-	byte_arr = (unsigned char *)&main_add;
+	byte_arr = (unsigned char *)&main;
 
 	for (i = 0; i < num_bytes; i++)
 	{
